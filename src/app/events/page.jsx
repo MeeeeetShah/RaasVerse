@@ -6,6 +6,7 @@ import Navbar from '@/components/public/Navbar';
 import EventsCatalog from '@/components/public/EventsCatalog';
 import BookingModal from '@/components/public/BookingModal';
 import VenueLayoutModal from '@/components/public/VenueLayoutModal';
+import ReviewModal from '@/components/public/ReviewModal';
 import FestiveSound from '@/components/public/FestiveSound';
 import Footer from '@/components/public/Footer';
 import { Sparkles } from 'lucide-react';
@@ -18,6 +19,13 @@ function EventsContent() {
   const [loading, setLoading] = useState(true);
   const [selectedEventForBooking, setSelectedEventForBooking] = useState(null);
   const [selectedEventForLayout, setSelectedEventForLayout] = useState(null);
+
+  // Review modal state
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  const [reviewPrefill, setReviewPrefill] = useState({
+    eventTitle: 'Navratri Garba 2026',
+    customerName: ''
+  });
 
   useEffect(() => {
     async function fetchEvents() {
@@ -35,6 +43,55 @@ function EventsContent() {
     }
     fetchEvents();
   }, []);
+
+  // Global listener for returning from WhatsApp booking
+  useEffect(() => {
+    const checkPendingReview = () => {
+      try {
+        const pendingStr = localStorage.getItem('raasverse_pending_review');
+        if (pendingStr) {
+          const pending = JSON.parse(pendingStr);
+          if (Date.now() - (pending.timestamp || 0) < 15 * 60 * 1000) {
+            localStorage.removeItem('raasverse_pending_review');
+            setTimeout(() => {
+              setSelectedEventForBooking(null);
+              setReviewPrefill({
+                eventTitle: pending.eventTitle || 'Navratri Garba 2026',
+                customerName: pending.customerName || ''
+              });
+              setIsReviewModalOpen(true);
+            }, 800);
+          }
+        }
+      } catch (_) {}
+    };
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        checkPendingReview();
+      }
+    };
+
+    const onFocus = () => {
+      checkPendingReview();
+    };
+
+    window.addEventListener('visibilitychange', onVisibilityChange);
+    window.addEventListener('focus', onFocus);
+
+    return () => {
+      window.removeEventListener('visibilitychange', onVisibilityChange);
+      window.removeEventListener('focus', onFocus);
+    };
+  }, []);
+
+  const handleOpenReview = (info = {}) => {
+    setReviewPrefill({
+      eventTitle: info.eventTitle || 'Navratri Garba 2026',
+      customerName: info.customerName || ''
+    });
+    setIsReviewModalOpen(true);
+  };
 
   return (
     <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,12 +126,21 @@ function EventsContent() {
           setSelectedEventForBooking(null);
           setSelectedEventForLayout(ev);
         }}
+        onOpenReview={handleOpenReview}
       />
 
       <VenueLayoutModal
         event={selectedEventForLayout}
         isOpen={Boolean(selectedEventForLayout)}
         onClose={() => setSelectedEventForLayout(null)}
+      />
+
+      {/* Review Modal */}
+      <ReviewModal
+        isOpen={isReviewModalOpen}
+        onClose={() => setIsReviewModalOpen(false)}
+        prefilledEventTitle={reviewPrefill.eventTitle}
+        prefilledName={reviewPrefill.customerName}
       />
     </div>
   );

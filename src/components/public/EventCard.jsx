@@ -85,6 +85,25 @@ export default function EventCard({ event, onBookClick, onLayoutClick }) {
               <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
               <span className="truncate">{event.location || event.venue || event.city || 'Ahmedabad, Gujarat'}</span>
             </div>
+
+            {/* Event Features Chips */}
+            {event.features && Array.isArray(event.features) && event.features.length > 0 && (
+              <div className="flex flex-wrap items-center gap-1 pt-1.5">
+                {event.features.slice(0, 2).map((feat, fIdx) => (
+                  <span
+                    key={fIdx}
+                    className="px-2 py-0.5 rounded text-[10px] font-semibold bg-white/5 text-gray-300 border border-white/10"
+                  >
+                    ✨ {feat}
+                  </span>
+                ))}
+                {event.features.length > 2 && (
+                  <span className="text-[10px] font-semibold text-rose-400/90 pl-0.5">
+                    +{event.features.length - 2} more
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

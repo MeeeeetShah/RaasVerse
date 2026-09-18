@@ -23,19 +23,36 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 1499
+              "price": 1499,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1399
+              "price": 1399,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             },
             {
               "name": "Season Pass (All 9 Nights)",
-              "price": 5999
+              "price": 5999,
+              "perks": [
+                "All 9 Nights Access",
+                "Special Commemorative Band"
+              ]
             }
           ]
         },
@@ -45,15 +62,28 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 1499
+              "price": 1499,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1399
+              "price": 1399,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -63,15 +93,28 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 899
+              "price": 899,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 1699
+              "price": 1699,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1599
+              "price": 1599,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -81,11 +124,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 899
+              "price": 899,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 1699
+              "price": 1699,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -95,15 +147,28 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 999
+              "price": 999,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 1899
+              "price": 1899,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -113,15 +178,28 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 1199
+              "price": 1199,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 2199
+              "price": 2199,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1999
+              "price": 1999,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -131,11 +209,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 1299
+              "price": 1299,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 2399
+              "price": 2399,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -145,11 +232,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 1199
+              "price": 1199,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 2199
+              "price": 2199,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -159,14 +255,37 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 999
+              "price": 999,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Lounge Pass",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         }
+      ],
+      "features": [
+        "AC VIP Lounge Dome",
+        "Valet Parking Available",
+        "Curated Gourmet Food Stalls",
+        "Monumental 50K Watt Sound",
+        "CCTV 24x7 and Bouncer Security",
+        "Pristine Lawn Ground"
+      ],
+      "venueFeatures": [
+        "Pristine Lawn",
+        "Food Court",
+        "Valet Parking",
+        "Security Staff"
       ]
     },
     {
@@ -191,15 +310,28 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 899
+              "price": 899,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Royal Pass",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1599
+              "price": 1599,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -209,11 +341,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 899
+              "price": 899,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Royal Pass",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -223,11 +364,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 999
+              "price": 999,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Royal Pass",
-              "price": 1899
+              "price": 1899,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -237,11 +387,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 1099
+              "price": 1099,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Royal Pass",
-              "price": 1999
+              "price": 1999,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -251,14 +410,36 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 1299
+              "price": 1299,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Royal Pass",
-              "price": 2399
+              "price": 2399,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         }
+      ],
+      "features": [
+        "Royal Heritage Setting",
+        "50,000 Twinkling Fairy Lights",
+        "Valet Parking",
+        "VIP Hospitality Zone",
+        "Pure Family Atmosphere"
+      ],
+      "venueFeatures": [
+        "Pristine Lawn",
+        "Food Court",
+        "Valet Parking",
+        "Security Staff"
       ]
     },
     {
@@ -283,15 +464,28 @@
           "passes": [
             {
               "name": "Student Pass (ID Req)",
-              "price": 699
+              "price": 699,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "General Admission",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Stage Front",
-              "price": 1499
+              "price": 1499,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -301,15 +495,28 @@
           "passes": [
             {
               "name": "Student Pass",
-              "price": 699
+              "price": 699,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "General Admission",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Stage Front",
-              "price": 1499
+              "price": 1499,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -319,11 +526,20 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 899
+              "price": 899,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Stage Front",
-              "price": 1699
+              "price": 1699,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -333,14 +549,36 @@
           "passes": [
             {
               "name": "General Admission",
-              "price": 1199
+              "price": 1199,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VIP Stage Front",
-              "price": 2199
+              "price": 2199,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         }
+      ],
+      "features": [
+        "Celebrity Singer Lineup",
+        "Concert Stage and Laser Show",
+        "Fast-Track WhatsApp Entry",
+        "Youth and Squad Zones",
+        "Night Food Street"
+      ],
+      "venueFeatures": [
+        "Pristine Lawn",
+        "Food Court",
+        "Valet Parking",
+        "Security Staff"
       ]
     },
     {
@@ -365,11 +603,19 @@
           "passes": [
             {
               "name": "Daily Pass",
-              "price": 599
+              "price": 599,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 999
+              "price": 999,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -379,11 +625,19 @@
           "passes": [
             {
               "name": "Daily Pass",
-              "price": 599
+              "price": 599,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 999
+              "price": 999,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -393,14 +647,35 @@
           "passes": [
             {
               "name": "Daily Pass",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1399
+              "price": 1399,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         }
+      ],
+      "features": [
+        "Authentic Gujarati Raas",
+        "Family Friendly Seating",
+        "Ample Parking Space",
+        "Traditional Dhol Beats",
+        "Clean Sanitation"
+      ],
+      "venueFeatures": [
+        "Pristine Lawn",
+        "Food Court",
+        "Valet Parking",
+        "Security Staff"
       ]
     },
     {
@@ -425,15 +700,28 @@
           "passes": [
             {
               "name": "Entry Only",
-              "price": 1099
+              "price": 1099,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Entry + Buffet Dinner",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VVIP Cabana (6 Pax)",
-              "price": 8999
+              "price": 8999,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         },
@@ -443,18 +731,44 @@
           "passes": [
             {
               "name": "Entry Only",
-              "price": 1299
+              "price": 1299,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Entry + Buffet Dinner",
-              "price": 1999
+              "price": 1999,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "VVIP Cabana (6 Pax)",
-              "price": 9999
+              "price": 9999,
+              "perks": [
+                "Fast Track VIP Entry",
+                "Air-Cooled Lounge Access",
+                "Front Stage View"
+              ]
             }
           ]
         }
+      ],
+      "features": [
+        "Resort Lawns Setting",
+        "VVIP Air-Cooled Dome",
+        "Multi-Cuisine Food Court",
+        "Exclusive Couple Entry",
+        "Valet Car Pickup"
+      ],
+      "venueFeatures": [
+        "Pristine Lawn",
+        "Food Court",
+        "Valet Parking",
+        "Security Staff"
       ]
     },
     {
@@ -467,7 +781,7 @@
       "badge": "Mega Arena",
       "trending": true,
       "order": 6,
-      "price": 999,
+      "price": 799,
       "dateRange": "11 Oct - 19 Oct 2026",
       "image": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop",
       "layoutImage": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
@@ -479,15 +793,27 @@
           "passes": [
             {
               "name": "Male Pass",
-              "price": 1199
+              "price": 1199,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Female Pass",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -497,15 +823,27 @@
           "passes": [
             {
               "name": "Male Pass",
-              "price": 1199
+              "price": 1199,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Female Pass",
-              "price": 799
+              "price": 799,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 1799
+              "price": 1799,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         },
@@ -515,20 +853,59 @@
           "passes": [
             {
               "name": "Male Pass",
-              "price": 1499
+              "price": 1499,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Female Pass",
-              "price": 999
+              "price": 999,
+              "perks": [
+                "Ground Entry",
+                "Access to Food Stalls"
+              ]
             },
             {
               "name": "Couple Pass",
-              "price": 2199
+              "price": 2199,
+              "perks": [
+                "1 Couple Entry (He + She)",
+                "Separate Couple Queue"
+              ]
             }
           ]
         }
+      ],
+      "features": [
+        "Gujarat's Iconic Circle Garba",
+        "25,000 Dancer Capacity Lawn",
+        "High-Fidelity Audio Setup",
+        "Medical Desk",
+        "VIP Fast Track Entry"
+      ],
+      "venueFeatures": [
+        "Pristine Lawn",
+        "Food Court",
+        "Valet Parking",
+        "Security Staff"
       ]
     }
   ],
-  "inquiries": []
+  "inquiries": [],
+  "reviews": [
+    {
+      "name": "Aarav Mehta",
+      "city": "Bodakdev, Ahmedabad",
+      "eventTitle": "Mandalam Garba 2026",
+      "avatar": "A",
+      "rating": 5,
+      "text": "Seamless WhatsApp pass confirmation! Took 1 Gold and 2 General passes for our squad in one go. Excellent service!",
+      "verified": true,
+      "createdAt": "2026-09-18T04:56:23.569Z",
+      "id": 1,
+      "updatedAt": "2026-09-18T04:56:23.569Z"
+    }
+  ]
 }

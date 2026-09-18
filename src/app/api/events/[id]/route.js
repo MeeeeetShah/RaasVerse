@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/nosql';
 import { verifySuperAdmin } from '@/lib/auth';
+import { getEventStartingPrice } from '@/lib/pricing';
 
 // GET /api/events/[id] - Public single event
 export async function GET(request, { params }) {
@@ -33,6 +34,12 @@ export async function PUT(request, { params }) {
 
     const body = await request.json();
 
+    const datesToUse = body.dates !== undefined ? body.dates : existing.dates;
+    const computedPrice = getEventStartingPrice({
+      dates: datesToUse,
+      price: body.price !== undefined ? body.price : existing.price
+    });
+
     const updates = {
       ...(body.title !== undefined && { title: body.title.trim() }),
       ...(body.festival !== undefined && { festival: body.festival }),
@@ -42,11 +49,13 @@ export async function PUT(request, { params }) {
       ...(body.badge !== undefined && { badge: body.badge }),
       ...(body.trending !== undefined && { trending: Boolean(body.trending) }),
       ...(body.order !== undefined && { order: Number(body.order) }),
-      ...(body.price !== undefined && { price: Number(body.price) }),
+      price: computedPrice,
       ...(body.dateRange !== undefined && { dateRange: body.dateRange }),
       ...(body.image !== undefined && { image: body.image }),
       ...(body.layoutImage !== undefined && { layoutImage: body.layoutImage }),
       ...(body.description !== undefined && { description: body.description }),
+      ...(body.features !== undefined && { features: body.features }),
+      ...(body.venueFeatures !== undefined && { venueFeatures: body.venueFeatures }),
       ...(body.dates !== undefined && { dates: body.dates })
     };
 

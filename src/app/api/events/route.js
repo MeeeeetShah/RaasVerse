@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/nosql';
 import { verifySuperAdmin } from '@/lib/auth';
+import { getEventStartingPrice } from '@/lib/pricing';
 
 // GET /api/events - Public endpoint
 export async function GET(request) {
@@ -72,11 +73,13 @@ export async function POST(request) {
       badge: body.badge || '',
       trending: Boolean(body.trending),
       order: Number(body.order) || 1,
-      price: Number(body.price) || (body.dates?.[0]?.passes?.[0]?.price || 0),
+      price: getEventStartingPrice({ dates: body.dates, price: body.price }),
       dateRange: body.dateRange || '',
       image: body.image || 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop',
       layoutImage: body.layoutImage || '',
       description: body.description || '',
+      features: Array.isArray(body.features) ? body.features : [],
+      venueFeatures: Array.isArray(body.venueFeatures) ? body.venueFeatures : [],
       dates: Array.isArray(body.dates) ? body.dates : []
     };
 

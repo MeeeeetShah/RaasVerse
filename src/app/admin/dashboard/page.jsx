@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import EventFormModal from '@/components/admin/EventFormModal';
 import DeleteConfirmModal from '@/components/admin/DeleteConfirmModal';
+import { getEventStartingPrice, getEventPriceRange } from '@/lib/pricing';
 
 export default function AdminDashboardPage() {
   const router = useRouter();
@@ -285,8 +286,21 @@ export default function AdminDashboardPage() {
                     </td>
 
                     {/* Starting Price */}
-                    <td className="py-4 px-4 font-black text-amber-400 font-mono text-sm">
-                      ₹{ev.price}
+                    <td className="py-4 px-4 font-mono">
+                      <span className="font-black text-amber-400 text-sm">
+                        ₹{getEventStartingPrice(ev)}
+                      </span>
+                      {(() => {
+                        const range = getEventPriceRange(ev);
+                        if (range.max > range.min) {
+                          return (
+                            <span className="block text-[10px] text-gray-400 font-sans">
+                              ₹{range.min} - ₹{range.max}
+                            </span>
+                          );
+                        }
+                        return null;
+                      })()}
                     </td>
 
                     {/* Trending Switch */}

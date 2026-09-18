@@ -15,12 +15,20 @@ import FestiveSound from '@/components/public/FestiveSound';
 import Footer from '@/components/public/Footer';
 import BookingModal from '@/components/public/BookingModal';
 import VenueLayoutModal from '@/components/public/VenueLayoutModal';
+import ReviewModal from '@/components/public/ReviewModal';
 
 export default function HomePage() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedEventForBooking, setSelectedEventForBooking] = useState(null);
   const [selectedEventForLayout, setSelectedEventForLayout] = useState(null);
+
+  // Review modal state
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  const [reviewPrefill, setReviewPrefill] = useState({
+    eventTitle: 'Navratri Garba 2026',
+    customerName: ''
+  });
 
   useEffect(() => {
     async function loadEvents() {
@@ -39,6 +47,48 @@ export default function HomePage() {
     loadEvents();
   }, []);
 
+  // Global listener for returning from WhatsApp booking
+  useEffect(() => {
+    const checkPendingReview = () => {
+      try {
+        const pendingStr = localStorage.getItem('raasverse_pending_review');
+        if (pendingStr) {
+          const pending = JSON.parse(pendingStr);
+          // Only prompt if within the last 15 minutes
+          if (Date.now() - (pending.timestamp || 0) < 15 * 60 * 1000) {
+            localStorage.removeItem('raasverse_pending_review');
+            setTimeout(() => {
+              setSelectedEventForBooking(null);
+              setReviewPrefill({
+                eventTitle: pending.eventTitle || 'Navratri Garba 2026',
+                customerName: pending.customerName || ''
+              });
+              setIsReviewModalOpen(true);
+            }, 800);
+          }
+        }
+      } catch (_) {}
+    };
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        checkPendingReview();
+      }
+    };
+
+    const onFocus = () => {
+      checkPendingReview();
+    };
+
+    window.addEventListener('visibilitychange', onVisibilityChange);
+    window.addEventListener('focus', onFocus);
+
+    return () => {
+      window.removeEventListener('visibilitychange', onVisibilityChange);
+      window.removeEventListener('focus', onFocus);
+    };
+  }, []);
+
   const handleBookClick = (event) => {
     setSelectedEventForBooking(event);
   };
@@ -47,11 +97,20 @@ export default function HomePage() {
     setSelectedEventForLayout(event);
   };
 
+  const handleOpenReview = (info = {}) => {
+    setReviewPrefill({
+      eventTitle: info.eventTitle || 'Navratri Garba 2026',
+      customerName: info.customerName || ''
+    });
+    setIsReviewModalOpen(true);
+  };
+
   const handleSelectDayFromPlanner = (dateString) => {
     // Open the first event with this date or default trending event
-    const matched = events.find((e) =>
-      e.dates?.some((d) => d.date?.toLowerCase().includes(dateString.toLowerCase()))
-    ) || events[0];
+    const matched =
+      events.find((e) =>
+        e.dates?.some((d) => d.date?.toLowerCase().includes(dateString.toLowerCase()))
+      ) || events[0];
     if (matched) {
       setSelectedEventForBooking(matched);
     }
@@ -85,8 +144,8 @@ export default function HomePage() {
       {/* 4-Pillars Trust & Why Choose RaasVerse */}
       <WhyChooseUs />
 
-      {/* Verified Ahmedabad Reviews Marquee */}
-      <Testimonials />
+      {/* Verified Ahmedabad Reviews Marquee with Write Review Button */}
+      <Testimonials onOpenReview={handleOpenReview} />
 
       {/* WhatsApp VIP & Instagram Community */}
       <SocialCommunity />
@@ -109,6 +168,7 @@ export default function HomePage() {
           setSelectedEventForBooking(null);
           setSelectedEventForLayout(ev);
         }}
+        onOpenReview={handleOpenReview}
       />
 
       {/* Interactive Venue Layout Diagram Modal */}
@@ -116,6 +176,14 @@ export default function HomePage() {
         event={selectedEventForLayout}
         isOpen={Boolean(selectedEventForLayout)}
         onClose={() => setSelectedEventForLayout(null)}
+      />
+
+      {/* Community Review Popup Modal */}
+      <ReviewModal
+        isOpen={isReviewModalOpen}
+        onClose={() => setIsReviewModalOpen(false)}
+        prefilledEventTitle={reviewPrefill.eventTitle}
+        prefilledName={reviewPrefill.customerName}
       />
     </main>
   );
